@@ -1,0 +1,291 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('images/Telas/BACKGROUND.png') no-repeat center fixed;
+  background-size: cover;
+}
+
+#screen_one, #screen_two {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-size: cover;
+  -webkit-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  position: relative;
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+#screen_one, #screen_two {
+  height: 1024px;
+}
+}
+
+/** 
+* iPad with landscape orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+#screen_one, #screen_two {
+  height: 768px;
+}
+}
+
+/**
+* iPhone 5
+* You can also target devices with aspect ratio.
+*/
+@media screen and (device-aspect-ratio: 40/71) {
+#screen_one, #screen_two {
+  height: 500px;
+}
+}
+
+#screen_one {
+  text-align: center;
+  z-index: 1000;
+}
+
+
+#screen_two {
+  position: absolute;
+  top: 0;
+  /* opacity: 0; */
+  display: none;
+}
+
+.button_start {
+  max-width: 130px;
+  cursor: pointer;
+}
+
+.item {
+margin: 0px;
+text-align: center;
+  font-size: 1.5em;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.item img {
+  width: 60%;
+  max-width: 60%;
+  -webkit-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.item:nth-child(even) img {
+  -webkit-animation: wiggle_reverse 5s infinite;
+          animation: wiggle_reverse 5s infinite;
+}
+
+.item:nth-child(odd) img {
+  -webkit-animation: wiggle 5s infinite;
+          animation: wiggle 5s infinite;
+}
+
+
+
+.play-again {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.center-play {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+.play-again, center-play {
+  height: 1024px;
+}
+}
+
+/** 
+* iPad with landscape orientation.
+*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+.play-again, center-play {
+  height: 768px;
+}
+}
+
+/**
+* iPhone 5
+* You can also target devices with aspect ratio.
+*/
+@media screen and (device-aspect-ratio: 40/71) {
+.play-again, center-play {
+  height: 500px;
+}
+}
+
+.center-play div {
+  margin-top: 100px;
+  background: #003f5d;
+  color: white;
+  padding: 20px 60px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow:  2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.center-play div button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: #003f5d;
+  font-weight: bold;
+  margin-top: 10px;
+  -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow:  2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+
+
+.image_p {
+  text-align: center;
+}
+
+@-webkit-keyframes wiggle {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  10% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  20% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  30% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  40% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  50% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  60% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  70% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  80% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  90% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@keyframes wiggle {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  10% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  20% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  30% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  40% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  50% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  60% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  70% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  80% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  90% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@-webkit-keyframes wiggle_reverse {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  10% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  20% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  30% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  40% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  50% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  60% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  70% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  80% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  90% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@keyframes wiggle_reverse {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  10% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  20% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  30% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  40% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  50% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  60% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  70% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  80% { -webkit-transform: rotate(5deg); transform: rotate(5deg); }
+  90% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+
+.end_game {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .mob-only {
+      display: none;
+  }    
+}
+
+.video-border {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.video-itself {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+video {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+}
+
+.vjs-poster {
+  border-radius: 50px;
+}
+
+.desk-only {
+  width: 100%;
+  height: 100vh;
+  background: url('images/Telas/Tela-3.png') no-repeat center fixed;
+  background-size: cover;
+}
+
+@media (min-width: 1200px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+  max-width: 1080px;
+  
+}
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+      max-width: initial;
+      width: 70%;
+  }
+
+  .button_start {
+      max-width: 300px;
+      cursor: pointer;
+  }
+}
+
+.image_logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+}
