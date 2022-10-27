@@ -1,0 +1,1 @@
+Precisa rodar num server local para os vídeos rodarem.
